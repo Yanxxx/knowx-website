@@ -1,0 +1,72 @@
+<style>
+.footer {
+  background: var(--color-dark);
+  color: #ccc;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col li {
+  margin-bottom: 0.5rem;
+}
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+}
+.footer-col a:hover {
+  color: #fff;
+}
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #444;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+}
+</style>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">Cobot Gripper</a></li>
+          <li><a href="#">Torque Sensor</a></li>
+          <li><a href="#">Automation Software</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Solution</h4>
+        <ul>
+          <li><a href="#">Palleting</a></li>
+          <li><a href="#">Grinding</a></li>
+          <li><a href="#">Loading and Unloading</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Incorporation</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; {new Date().getFullYear()} MyAutomation Inc. All rights are reserved。 
+    </div>
+  </div>
+</footer>

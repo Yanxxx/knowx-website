@@ -1,0 +1,50 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  imgSrc: string; // 在实际项目中，你会使用 <Image> 组件
+  url: string;
+}
+
+const { title, description, imgSrc, url } = Astro.props;
+---
+
+<style>
+.card {
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.card-image {
+  height: 200px;
+  background: #f0f0f0;
+  /* 在真实项目中，这里会显示图片 */
+}
+.card-content {
+  padding: 1.5rem;
+}
+.card-content h3 {
+  margin-top: 0;
+}
+.card a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+</style>
+
+<div class="card">
+  <a href={url}>
+    <div class="card-image">
+      </div>
+    <div class="card-content">
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+  </a>
+</div>

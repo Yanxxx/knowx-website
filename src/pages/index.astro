@@ -1,11 +1,49 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Hero from '../components/Hero.astro';
+import ProductCard from '../components/ProductCard.astro';
 ---
 
-<Layout>
-	<Welcome />
+<style>
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+  }
+</style>
+
+<Layout title="Empowered your production process with Automated AI">
+  
+  <Hero />
+
+  <section class="container">
+    <h2 class="section-title">Core Products</h2>
+    <div class="product-grid">
+      <ProductCard 
+        title="Cooperative Grippers" 
+        description="Highly adaptive task fitting grippers. "
+        imgSrc="/images/gripper.jpg"
+        url="/products"
+      />
+      <ProductCard 
+        title="Wrist Torque Sensor" 
+        description="Haptic tasks。"
+        imgSrc="/images/sensor.jpg"
+        url="/products"
+      />
+       <ProductCard 
+        title="Automated Software Platform" 
+        description="Programming free fast adaptive deploy unit. "
+        imgSrc="/images/software.jpg"
+        url="/products"
+      />
+    </div>
+  </section>
+
 </Layout>

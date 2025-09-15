@@ -1,0 +1,63 @@
+/* 使用现代 CSS 重置和专业字体 */
+:root {
+  --color-primary: #004a99; /* 类似 Robotiq 的主蓝色 */
+  --color-dark: #222;
+  --color-light: #f4f4f4;
+  --color-text: #333;
+  --color-text-light: #666;
+  --container-width: 1200px;
+  --border-radius: 5px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #fff;
+  color: var(--color-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #003366;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
